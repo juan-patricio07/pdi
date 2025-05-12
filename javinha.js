@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const perguntasContainer = document.getElementById('perguntasContainer');
+    const submitButton = document.getElementById('submitButton');
 
     const perguntas = [
         "Comunico minhas ideias com clareza e objetividade.",
@@ -14,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "Trabalho de forma autônoma, sem necessidade de supervisão constante."
     ];
 
-    // Criar as 10 perguntas manualmente
     perguntas.forEach((pergunta, i) => {
         const perguntaDiv = document.createElement('div');
         perguntaDiv.classList.add('question');
@@ -33,6 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const form = document.getElementById('avaliacaoForm');
+
+    // Verificação em tempo real para ativar ou desativar o botão de envio
+    form.addEventListener('change', () => {
+        const allAnswered = Array.from({ length: 10 }, (_, i) =>
+            form.querySelector(`input[name="q${i + 1}"]:checked`)
+        ).every(input => input !== null);
+
+        submitButton.disabled = !allAnswered;
+    });
+
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         const formData = new FormData(form);
@@ -40,7 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 1; i <= 10; i++) {
             const resposta = formData.get('q' + i);
-            respostas.push(resposta ? parseInt(resposta) : 0);
+            if (!resposta) {
+                alert(`Por favor, responda todas as questões antes de enviar o formulário.`);
+                return;
+            }
+            respostas.push(parseInt(resposta));
         }
 
         console.log('Respostas:', respostas);
