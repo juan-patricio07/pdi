@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <link rel="stylesheet" href="/CSS/informacoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral de navegação -->
+        <nav class="sidebar">
+            <div class="logo-container">
+                <img src="/image/principal/LOGO CSPF.png" alt="Logo do CSPF" class="logo">
+            </div>
+            <ul class="menu">
+                    <li class="menu-item">
+                    <a href="#">
+                    <a href="informacoes.html">
+                        <i class="fa-solid fa-user icon"></i>
+                        <span>Minha Conta</span>
+                    </a>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <a href="principal.html">
+                            <i class="fas fa-home icon"></i>
+                            <span>Página Inicial</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <a href="formulario.html">
+                            <i class="fas fa-edit icon"></i>
+                            <span>Realizar Teste</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <a href="formulario.html">
+                            <i class="fas fa-chart-bar icon"></i>
+                            <span>Resultado</span>
+                        </a>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <a href="login.html">
+                            <i class="fas fa-sign-out-alt icon"></i>
+                            <span>Deslogar</span>
+                        </a>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+<main class="content">
+    <div class="form-container">
+        <div class="icon-container">
+            <img src="/image/minha conta/usuário.png" alt="Ícone de lápis" class="icon-form">
+        </div>
+
+        <form class="formulario">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" id="sobrenome" name="sobrenome">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" name="dataNascimento">
+
+            <label for="sobre">Sobre</label>
+            <input type="text" id="sobre" name="sobre">
+
+            <label for="experiencia">Experiência Profissional</label>
+            <input type="text" id="experiencia" name="experiencia">
+        </form>
+    </div>
+    <div class="form-buttons">
+        <button type="submit" class="btn salvar">Salvar</button>
+        <button type="reset" class="btn limpar">Limpar</button>
+    </div>
+</main>
+
+</body>
+</html>

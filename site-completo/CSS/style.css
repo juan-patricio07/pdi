@@ -1,0 +1,75 @@
+/* Reset e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.left, .right {
+  width: 50%;
+  padding: 60px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #001f26;
+}
+
+.left img.logo {
+  width: 60px;
+  height: 60px;
+  background: lightgray;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+
+.left h2 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.left p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left, .right {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  
+  .left {
+    padding-bottom: 20px;
+  }
+  
+  .right {
+    padding: 20px;
+  }
+}
