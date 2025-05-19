@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Formulário com Gráfico</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
     <div class="container">
-        <h2>Formulário</h2>
+        <h2>Avaliação Pessoal</h2>
         <p class="instructions">
-            Instruções: Marque um checkbox (O) para indicar sua avaliação em cada item, onde 1 bolinha é o pior e 4
-            bolinhas é o melhor.
+            Instruções: Marque uma opção para indicar sua avaliação em cada item, onde 1 é o pior e 4 é o melhor.
         </p>
 
-        <div class="container">
-            <h2>Avaliação Pessoal</h2>
-            <form id="avaliacaoForm">
-                <div id="perguntasContainer"></div>
-                <button type="submit" id="submitButton" disabled>Enviar</button>
-            </form>
-            <canvas id="resultadoGrafico"></canvas>
-        </div>
-
         <form id="avaliacaoForm">
-            <!-- Gerar perguntas dinamicamente -->
             <div id="perguntasContainer"></div>
-            <button type="submit">Finalizar</button>
+            <button type="submit" id="submitButton" disabled>Enviar</button>
         </form>
+
+        <canvas id="resultadoGrafico"></canvas>
+        <button type="submit">Gerar PDF</button>
     </div>
 
+    <!-- Dependências -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./javinha.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
+</body>
 </html>
